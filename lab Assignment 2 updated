@@ -1,0 +1,73 @@
+import { StatusBar } from 'expo-status-bar';
+import {
+  StyleSheet,
+  View,
+  SafeAreaView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+
+export default function LOGIN() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.subcontainer}>
+        <Text style={{fontFamily:"bold", fontSize:30,}}>Login</Text>
+        <TextInput placeholder="Enter UserName" style={styles.Input} />
+        <TextInput placeholder="Enter Password" style={styles.Input} />
+        <TouchableOpacity style={styles.button}>Sign in</TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            width: 450,
+            textAlign: "center",
+            color: "#0000ff",
+            height: 50,
+            justifyContent: "center",
+            marginTop: 30,
+            textDecorationLine: 'underline',
+          }}>
+          Don't have account? Register
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#000000",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  subcontainer: {
+    width: 450,
+    height: 400,
+    backgroundColor: "#808080",
+    borderColor: "#1260CC",
+    alignItems: "center",
+    paddingTop: 50,
+  },
+  Input: {
+    borderColor: "white",
+    borderWidth: 3,
+    width: 300,
+    color: "grey",
+    marginTop: 20,
+    height: 50,
+    backgroundColor: "white",
+    borderRadius: 5,
+  },
+  button: {
+    width: 300,
+    backgroundColor: "red",
+    textAlign: "center",
+    color: "#fff",
+    height: 40,
+    justifyContent: "center",
+    marginTop: 20,
+
+
+  },
+});
